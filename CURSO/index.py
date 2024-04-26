@@ -139,5 +139,20 @@ class curso:
                 self.__notas[i] == 0.0 
 
             else:
-                return 0
+                break
             
+    def CalcularnumeroMinimoNotas(self):
+
+        sumarNotas = 0 
+        contador = 0 
+        
+        for i in range(len(self.__notas)):
+                    sumarNotas += self.__notas[i]
+                    contador += 1
+                    if sumarNotas >  30:
+                            return contador
+                    
+                    else:
+                      return -1
+        
+                    

@@ -14,7 +14,7 @@ for i in range(len(notas)):
             print(-1) 
 
 
-print('--------------------------------------')
+print('2 --------------------------------------')
 
 
 
@@ -23,4 +23,28 @@ for i in range(len(notas)):
             if notas[i] < 3 :
                 notas[i] = 0.0 
             print(notas[i])
+
+
+print('3 -----------------------------')
+
+ 
+sumarNotas = 0 
+ 
+        
+for i in range(len(notas)):
+                    sumarNotas += notas[i]
+                                        
+                   
+print(sumarNotas)
+
+
+
+print ('------4-------------------------')          
+                   
+        
+
+
+
+
+
 
