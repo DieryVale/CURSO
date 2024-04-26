@@ -66,3 +66,68 @@ class curso:
             indice += 1
         print("Cantidad de notas que pasan: ", contardorNotas )
        
+    '''def cambairNotas(self):
+
+        # retornar un  metodo '''
+    def HayAlgunCinco(self):
+        existe = False
+        contador =  0
+        
+        while contador < len(self.__notas) and not existe:
+            
+            if self.__notas[contador] == 5:
+                existe = True
+                
+            contador += 1
+            
+        return existe
+    
+    def HayAlgunCinco2 (self):
+        existe = False
+        
+        for i in range(len(self.__notas)):
+            
+            if self.__notas[i] == 5:
+                existe = True
+                
+                break
+            
+        return existe
+    
+    def HayAlgunCinco3(self):
+        existe = False
+        
+        for nota in self.__notas:
+            
+            if nota == 5:
+                existe = True
+                
+                break
+            
+        return existe
+    
+    def EncontrarTresNotas(self):
+        existe = False
+        
+        for i in range(len(self.__notas)):
+            if self.__notas[i] == 1.5:
+                self.__notas[i] = 2.5
+                
+            existe = True
+            
+            break
+        return existe
+    
+    def EncontrarTresNotasDelValor5(self):
+        contador = 0
+        
+        for i in range(len(self.__notas)):
+            if self.__notas[i] == 5.0:
+                contador += 1
+                if contador == 3:
+                    return 1
+        
+                else:
+                
+                    return -1
+                
