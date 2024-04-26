@@ -2,7 +2,7 @@ class curso:
     
     def __init__(self):    
      
-     self.__notas =[3,4,5,2,3.5,0,1,2,5,4,3,4.2]
+     self.__notas =[2,4,5,2,3.5,0,1.5,2,5,2.5,3,4.2]
      
      
     def promedion(self):
@@ -130,4 +130,14 @@ class curso:
                 else:
                 
                     return -1
-                
+        
+    def RemplazarNotas(self):
+
+        for i in range(len(self.__notas)):
+
+            if self.__notas[i] < 3.0 :
+                self.__notas[i] == 0.0 
+
+            else:
+                return 0
+            
