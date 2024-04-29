@@ -154,5 +154,42 @@ class curso:
                     
                     else:
                       return -1
-        
+    
+    def cambairNotas(self): 
+        for i in range(len(self.__notas)):
+            if self.__notas[i] > 4.0 :
+                self.__notas[i] -= self.__notas[i] * 0.05
+
+            elif self.__notas[i] < 2.0:
+                self.__notas[i] += self.__notas[i] *0.5
+
+        return self.__notas
+    
+    def darMenorNota(self):
+         menorNota = self.__notas[0]
+
+         for nota in self.__notas:         
+             if nota < menorNota:
+                nota = menorNota
+         return menorNota
                     
+
+    def darRangoConMasNotas(self):
+        rango1 = 0
+        rango2 = 0
+        rango3 = 0
+
+        for nota in self.__notas:
+            if nota >= 0.0 and nota < 1.99:
+                rango1 += 1 
+            elif nota >= 2.0 and nota < 3.49:
+                 rango2 += 1 
+            elif nota >= 3.5 and nota <= 5.0:
+                rango3 += 1 
+
+        if rango1 < rango2 and rango1 > rango3:
+            return 1
+        if rango2 < rango1 and rango2 > rango3:
+            return 2
+        else:
+            return 3
